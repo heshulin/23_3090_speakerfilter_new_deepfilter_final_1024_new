@@ -1,0 +1,31 @@
+# experiment parameter
+SAMPLE_RATE: 8000                                                            # 采样率
+WIN_LEN: 1024                                                                  # 窗长
+FFT_SIZE: 513                                                                 # fft大小
+WIN_OFFSET: 128                                                               # 窗移
+LR: 0.0002                                                                     # 学习率
+MAX_EPOCH: 200                                                                 # 训练轮数
+EPSILON: 0.0000001                                                            #
+USE_CV: True                                                                  # [True,False]，是否使用验证集
+EVAL_STEP: 1200                                                               # 多少个step进行一次CV
+LOG_STEP: 500                                                                 # 多少个step输出一次信息
+MAX_LEN: 80000
+
+# server setting
+CUDA_ID: '0'                                                                  # 指定GPU编号
+BATCH_SIZE: 16                                                                # 批处理数
+NUM_WORK: 8                                                                   # 线程数
+
+
+# environment parameter
+DATA_PATH : '/data_zkh/ORIGIN_WSJ0/wsj0_2mix_extr/wav8k/max/'
+TT_MIX_PATH : '/data_zkh/ORIGIN_WSJ0/wsj0_2mix_extr/wav8k/max/tt/mix/'
+TT_CLE_PATH : '/data_zkh/ORIGIN_WSJ0/wsj0_2mix_extr/wav8k/max/tt/s1/'
+TT_ANC_PATH : '/data_zkh/ORIGIN_WSJ0/wsj0_2mix_extr/wav8k/max/tt/aux/'
+
+OUTPUT_DIR: '/data_zkh/hsl_result/'                                          # 输出根目录
+OFFLINE_TEST_DIR: '/data_zkh/hsl_result_tt/'                                      # 本地测试数据输出路径
+BEST_MODEL: 'best.ckpt'                                                       # 默认最好模型名称
+MID_MODEL: 'val.ckpt'                                                         # 默认中间模型名称
+SAVE_BEST_ONLY: False                                                         # [True,False]:[仅保存最好的模型,保存中间模型]
+WORKSPACE: '/speaker_extractor'                                                           # 子项目名称

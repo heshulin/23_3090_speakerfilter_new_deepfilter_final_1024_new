@@ -1,0 +1,10 @@
+requirement:
+thop
+
+
+
+
+model args:
+-m model_path:  example(python train.py -m /home/data/zkh/result/Template_v3/CRN/checkpoints/best.ckpt) default='none'
+-y yaml_name:   example(python train.py -y CRN.yaml)
+
